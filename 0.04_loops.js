@@ -65,7 +65,7 @@ while (x < 101) {
 	x += 10;
 }
 
-
+//Challenge: capitalize and replace first letter of string
 
 var studentName = "smita";
 //   lcv      collection
