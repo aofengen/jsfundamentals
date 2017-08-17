@@ -62,3 +62,36 @@ function isPrimeNumber(array) {
 	}
 	return primeArray.length-1;
 }
+
+//Bonus Challenge Two
+
+function makeArray2() {
+	var array = [];
+	for (i=5; i < 46; i++) {
+		array.push(i);
+	}
+	return array;
+}
+
+function removemult3sand5s(array) {
+	for (i = 0; i < array.length; i++) {
+		if ((array[i]%3) == 0 || (array[i]%5) == 0) {
+			array.splice(i);
+		}
+	}
+	return array;
+}
+
+function change1s(array) {
+	for (i = 0; i < array.length; i++) {
+		if ((array[i]%10) == 1) {
+			array[i] = 0;
+		}
+	}
+	return array;
+}
+var newArray = makeArray2();
+console.log(newArray);
+var array1 = removemult3sand5s(newArray);
+var array2 = change1s(array1);
+console.log(array2);
