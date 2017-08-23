@@ -26,8 +26,6 @@ function capitalize() {
  	document.getElementById("input").value = null; //Challenge 2: clear the form after button click
 }
 
-$(input).keyup(searchKeyPress);
-$(submitButton).click(capitalize);
 //Challenge: find out how to have a conditional target the "enter key"
 //so that once it's pressed it can sumbit the form
 
@@ -47,3 +45,6 @@ function addNameToList(name) {
 	entry.appendChild(document.createTextNode(name));
 	list.appendChild(entry);
 }
+
+$(input).keyup(searchKeyPress);
+$(submitButton).click(capitalize);
