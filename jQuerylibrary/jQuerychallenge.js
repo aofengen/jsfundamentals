@@ -7,46 +7,43 @@ $(function(){
 	$('#nameList').css('list-style-type', 'none');
 });
 
-// let input = document.getElementById("input");
-// let output = document.getElementById("output");
+let input = document.getElementById("input");
+let output = document.getElementById("output");
 
-let input = $('.input');
-let output = $('output');
-
-$('button').click(function capitalize() {
+function capitalize() {
 	let newName = "";
-	for (let l in input) {
+	for (let l in input.value) {
 		if (l == 0) {
-			newName = input[l].toUpperCase();
-		}// else if (input.value[l-1] === " ") {
-		// 	newName += input.value[l].toUpperCase();} //SUPER BONUS CHALLENGE: makes character after blank space uppercase
-		else {
-			newName += input[l].toLowerCase();
+			newName = input.value[l].toUpperCase();
+		} else if (input.value[l-1] === " ") {
+		 	newName += input.value[l].toUpperCase(); //SUPER BONUS CHALLENGE: makes character after blank space uppercase
+		} else {
+			newName += input.value[l].toLowerCase();
 		}		
 	}
-	console.log(newName);
-	output = "Capitalized Name: " + newName;
-// 	// addNameToList(newName);
-// 	document.getElementById("input").value = null; //Challenge 2: clear the form after button click
-});
+	output.innerHTML = "Capitalized Name: " + newName;
+ 	addNameToList(newName);
+ 	document.getElementById("input").value = null; //Challenge 2: clear the form after button click
+}
 
+$(input).keyup(searchKeyPress);
+$(submitButton).click(capitalize);
 //Challenge: find out how to have a conditional target the "enter key"
 //so that once it's pressed it can sumbit the form
 
-// function searchKeyPress (e) {
-// 	e = e || window.event //redunancy check in case event isn't passed to function
-// 	if (e.keyCode == 13) { //13 = enter key
-// 		document.getElementById("submitButton").click();
-// 		return false;
-// 	}
-// 	return true;
-// }
+function searchKeyPress () {
+	if (event.which == 13) { //13 = enter key
+		document.getElementById("submitButton").click();
+		return false;
+	}
+	return true;
+}
 
-// //Challenge 3: add names used to a list and display list w/o bullet points
+//Challenge 3: add names used to a list and display list w/o bullet points
 
-// function addNameToList(name) {
-// 	let list = document.getElementById("nameList");
-// 	let entry = document.createElement('li');
-// 	entry.appendChild(document.createTextNode(name));
-// 	list.appendChild(entry);
-// }
+function addNameToList(name) {
+	let list = document.getElementById("nameList");
+	let entry = document.createElement('li');
+	entry.appendChild(document.createTextNode(name));
+	list.appendChild(entry);
+}
