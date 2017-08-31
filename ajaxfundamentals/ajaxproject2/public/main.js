@@ -137,7 +137,7 @@ $(document).ready(function(){
 			let shipsObj = JSON.parse(localStorage.getItem('starships'));
 			shipsObj.ships.forEach(function(s){
 				$("#starships").append('<tr><td>'+ s + '</td></tr>')
-			})
+			})	
 		}
 	})
 
