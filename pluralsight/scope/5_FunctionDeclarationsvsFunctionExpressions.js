@@ -21,3 +21,16 @@ bar();  //ERROR!
 2. Makes debugging much harder (hard to find when anonymous)
 3. No self-documentation of code (no easy way to identify what the function does)
 */
+
+let foo;
+
+try {
+	foo.length;
+}
+catch (err) {
+	console.log(err); //type error
+}
+
+console.log(err) //reference error
+
+//Try-catch is known as block scope. Parameter of err is only available within the catch clause.
