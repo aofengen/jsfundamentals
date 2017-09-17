@@ -54,4 +54,4 @@ d; //3 -- oops!
 //with allows a shorthand reference to an object attribute. However, if the attribute is not already
 //declared, the compilier will create the attribute as a global variable instead. In addition,
 //using the with keyword creates an additional layer of lexical scope, which causes performance
-//issues within a program
+//issues within a program.

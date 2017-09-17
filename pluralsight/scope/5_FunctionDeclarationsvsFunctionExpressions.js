@@ -6,10 +6,11 @@ let foo = function bar() { //function expression
 		foo; //function...
 	}
 	baz();
+	console.log(foo);
 };
 
 foo();  //
-bar();  //ERROR!
+// bar();  //ERROR!
 
 //Line 1 is not a function declaration because the keyword function is not present at the beginning
 //of the statement. It is a function expression instead. It is also a named function expression
@@ -22,15 +23,15 @@ bar();  //ERROR!
 3. No self-documentation of code (no easy way to identify what the function does)
 */
 
-let foo;
+// let foo;
 
-try {
-	foo.length;
-}
-catch (err) {
-	console.log(err); //type error
-}
+// try {
+// 	foo.length;
+// }
+// catch (err) {
+// 	console.log(err); //type error
+// }
 
-console.log(err) //reference error
+// console.log(err) //reference error
 
-//Try-catch is known as block scope. Parameter of err is only available within the catch clause.
+// //Try-catch is known as block scope. Parameter of err is only available within the catch clause.
