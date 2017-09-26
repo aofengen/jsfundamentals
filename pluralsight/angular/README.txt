@@ -1,0 +1,2 @@
+These are my notes from a pluralsight course on Angular.js, taught by Deborah Kurata. The course can be found here: 
+https://app.pluralsight.com/library/courses/angular-2-getting-started-update (a Pluralsight account is required.)
