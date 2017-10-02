@@ -1,8 +1,0 @@
-Variations of JS:
-ES3
-ES5
-ES6 (AKA ES 2015)
-TypeScript
-
-TypeScript Playground http://www.typescriptlang.org/Playground
-
